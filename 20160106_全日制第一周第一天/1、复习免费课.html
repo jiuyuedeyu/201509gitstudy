@@ -15,25 +15,28 @@
     //5、Number() parseInt/parseFloat
 
     //二、
-    //1、getElementById("div1")  getElementsByClassName("w")[0]  getElementsByName("h")[0]  getElementsByTagName("div")[0]  querySelector/querySelectorAll...
+    //1、getElementById("div1")  getElementsByClassName("w")[0]  getElementsByName("h")[0]
+    // getElementsByTagName("div")[0]  querySelector/querySelectorAll...
     //2、document.documentElement.clientWidth || document.body.clientWidth  (clientHeight)
     //3、previousElementSibling
 
-    //"previousElementSibling" in curEle 判断previousElementSibling是否为curEle这个元素对象的一个属性，是它的属性返回true，不是返回false
+    //"previousElementSibling" in curEle 判断previousElementSibling是否为curEle这个元素对象的一个属性，
+    // 是它的属性返回true，不是返回false
     //例如：
     //    var obj = {name: "珠峰"};
     //    console.log("name" in obj);//->true
     //    console.log("age" in obj);//->false
 
     //    function prev(curEle) {
-    //        if ("previousElementSibling" in curEle) {//->当前的浏览器支持previousElementSibling获取上一个哥哥元素节点
+    //        if ("previousElementSibling" in curEle) {
+    // ->当前的浏览器支持previousElementSibling获取上一个哥哥元素节点
     //            return curEle.previousElementSibling;
     //        }
-    //        var pre = curEle.previousSibling;
-    //        while (pre && pre.nodeType !== 1) {
-    //            pre = pre.previousSibling;
+    //        var a = curEle.previousSibling;
+    //        while (a && a.nodeType !== 1) {
+    //            a = a.previousSibling;
     //        }
-    //        return pre;
+    //        return a;
     //    }
 
     //4、var oDiv=document.createElement("div"); document.body.appendChild(oDiv);
@@ -55,7 +58,8 @@
     //alert是把要输出的内容转换为字符串然后在进行输出的
 
 
-    //学习建议：把免费课的基础知识(尤其是我上课重点强调和我们的考试题)自己进行归纳总结，手写在一个笔记本上，以后每天晚上睡觉前看那么半个~一个小时就够了
+    //学习建议：把免费课的基础知识(尤其是我上课重点强调和我们的考试题)自己进行归纳总结，手写在一个笔记本上，
+    // 以后每天晚上睡觉前看那么半个~一个小时就够了
 
 
     //五、

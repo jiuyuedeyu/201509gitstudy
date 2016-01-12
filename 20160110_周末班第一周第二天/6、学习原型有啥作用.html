@@ -17,7 +17,8 @@
     //ary.push();//this->ary
 
     //我们自己在Array内置类的原型上增加了一个方法
-    //Array.prototype.push=function(){};//->原来有push方法,我们这样写的话会把之前的内置push方法给修改掉,这样是不对的 ->我们在命名的时候加一些特殊的前缀,防止修改内置的方法:my、zhuFeng...
+    //Array.prototype.push=function(){};//->原来有push方法,我们这样写的话会把之前的内置push方法给修改掉,这样是不对的
+    // ->我们在命名的时候加一些特殊的前缀,防止修改内置的方法:my、zhuFeng...
 
     //ary.__proto__.myDistinct();//->myDistinct中的this->ary.__proto__->Array.prototype
     //ary.myDistinct();//->myDistinct中的this->ary
@@ -46,7 +47,8 @@
 
 
     //内置方法的链式写法->需要保证执行当前的方法返回的结果还是当前类的一个实例
-    //ary.sort执行后的返回值->排序后的”数组“，由于返回值还是一个数组(它还是Array的一个实例)就可以继续使用数组的方法了,所以出现了ary.sort().reverse()...
+    //ary.sort执行后的返回值->排序后的”数组“，由于返回值还是一个数组(它还是Array的一个实例)就可以继续使用数组的方法了,
+    // 所以出现了ary.sort().reverse()...
     //执行到的pop的时候的返回值是删除的那一项,不是数组了,所以在执行push就报错了
     //    ary.sort(function (a, b) {
     //        return a - b;
