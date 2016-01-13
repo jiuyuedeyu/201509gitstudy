@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1" onclick="fn(2)">hello!</div>
+<script>
+    var oDiv = document.getElementById("div1");
+    oDiv.onclick = function(){
+      fn(2);
+    }
+    function fn(n1){
+        alert(n1);
+    }
+    function sum(){
+        alert("我在这儿~")
+    }
+//
+//    oDiv.onclick = function (){
+//        fn(3);
+//    }
+//    oDiv.onclick = sum;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //arguments = {0:10,1:5,callee:function sum(n1,n2){},length:2}
+    //arguments = {0:10,1:5,2:20,callee:function sum(){},length:3}
+   // [10,5,20] == {0:10,1:5,2:20}
+    function sum(){
+        var total = null;//标识
+        for(var i = 0;i<arguments.length;i++){
+            total += arguments[i];//total = total+arguments[i]
+            //i --0 total = total+arguments[0] =null+10=Number(null)+10 =10
+            //i --1 total = total+arguments[1] = 10+5 = 15
+            //i --2 total =total+arguments[2] = 15+20 = 35
+        }
+        return total;
+    }
+
+    console.log(sum(10,30));
+
+  //  var obj = {0:10,1:5,callee:function sum(n1,n2){},length:2};
+//    for (var attr in obj){
+//        console.log(obj[attr]);
+//    }
+//    for(var i = 0;i<obj.length;i++){
+//        //i 从0-1
+//        obj[0]
+//        obj[1]
+//
+//    }
+
+</script>
+</body>
+</html>

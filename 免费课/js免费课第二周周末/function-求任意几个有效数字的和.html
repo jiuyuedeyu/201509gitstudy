@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--求任意几个有效数字的和
+1.对传进来数判断一下是否是有效数字 isNaN()--是 false 不是有效数字true;
+-->
+<script>
+    function sum(){
+        var total = null;
+        for(var i = 0;i<arguments.length;i++){
+            if(isNaN(arguments[i])){ //Number("zhufeng")-NaN  isNaN(NaN) ->true
+                //什么也不操作
+            }else {
+                total += arguments[i];
+            }
+
+            //i --2 total = total+arguments[2]=15+"zhufeng" = "15zhufeng";
+        }
+        return total;
+    }
+   console.log( sum(10,5,"zhufeng") );
+
+</script>
+</body>
+</html>

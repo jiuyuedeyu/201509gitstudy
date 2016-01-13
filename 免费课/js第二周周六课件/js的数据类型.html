@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+    js是一门弱类型的语言,定义一个变量的时候,并不知道这个变量是什么类型的数据,只有赋值后才能知道这个变量是什么类型的
+    js的数据类型有哪些?
+    number,string,boolean,function,object,undefined,null
+    基本数据类型:number,string,boolean
+    引用数据:object(Array,RegExp,Math,Date)
+    特殊类型 :function
+    标示型数据类型 :undefined
+    标示型数据: null
+-->
+<script>
+    var u;
+    var n = 123;
+    var s = "abc";
+    var b = true;
+    var f = function(){}
+    var o = {};
+    var a  = [];
+    var reg = /^[a-z]$/;
+    var nu = null;
+  // 通过typeof来检测这个变量具体是什么数据类型的
+  //typeof返回的首先是字符串,字符串里面包含返回的数据类型的信息
+  // console.log(typeof  u) ; //"undefined"
+    console.log(typeof null);//"object";
+  //typeof有局限性,没法具体检测出属于object里面哪个类
+  //instanceof 用来检测这个对象是属于哪个类的实例 ,返回 true ,false
+    console.log(a instanceof Array);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //function有两个内置对象--arguments,this
+    /*
+    * arguments = {0:10,1:5,callee:function sum(n1,n2){},length:2}
+    * arguments[0] --第一个实参
+    * arguments[1] --第二个实参
+    * arguments.callee --方法本身  --在后面所学的递归调用的时候会用到这个属性
+    * arguments.length --实参的个数
+    * */
+
+    function sum(n1,n2,n3){//形参
+        //console.dir(arguments);
+        var total = null;
+        if(arguments.length==1){
+            total = n1;
+        }else if(arguments.length ==2){
+            total = n1+n2;
+        }else if(arguments.length ==3){
+            total = n1+n2+n3;
+        }
+        return total;
+    }
+    var a;
+    a = sum(10,20,30);//实参
+    console.log(a);
+
+</script>
+</body>
+</html>

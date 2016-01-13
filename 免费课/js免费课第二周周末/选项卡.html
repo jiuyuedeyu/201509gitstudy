@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        #tab{
+            width: 500px;
+            margin:50px auto;
+        }
+        #tab ul{
+            text-align: center;
+        }
+        #tab ul li.option{
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background: papayawhip;
+        }
+        .content {
+            height: 200px;
+            background: palegreen;
+            display: none;/*隐藏*/
+        }
+        #tab ul li.selectLi{
+            background: palegreen;
+        }
+        .selectDiv{
+            display: block;/*显示*/
+        }
+    </style>
+</head>
+<body>
+<div id="tab">
+    <ul>
+        <li class="option ">选项卡一</li>
+        <li class="option">选项卡二</li>
+        <li class="option">选项卡三</li>
+        <li class="option">选项卡四</li>
+    </ul>
+    <div class="content ">内容一</div>
+    <div class="content ">内容二</div>
+    <div class="content ">内容三</div>
+    <div class="content">内容四</div>
+</div>
+</body>
+</html>
+<script>
+    var tab = document.getElementById("tab");
+    var oLis = tab.getElementsByTagName("li");//一组li标签
+    var oDivs = tab.getElementsByTagName("div");//一组div标签
+   /* oLis.item(0).onclick = function(){
+        oLis.item(0).className = "option selectLi";
+        oDivs.item(0).className = "content selectDiv";
+    }
+    oLis.item(1).onclick = function(){
+        oLis.item(1).className = "option selectLi";
+        oDivs.item(1).className = "content selectDiv";
+    }
+    oLis.item(2).onclick = function(){
+        oLis.item(2).className = "option selectLi";
+        oDivs.item(2).className = "content selectDiv";
+    }
+    oLis.item(3).onclick = function(){
+        oLis.item(3).className = "option selectLi";
+        oDivs.item(3).className = "content selectDiv";
+    }*/
+
+    function changeTab(n){
+        //for循环是为了把li和div都设成默认的状态
+        for(var i = 0;i<oLis.length;i++){
+            oLis.item(i).className = "option";
+            oDivs.item(i).className = "content";
+        }
+        //为了设置当前点击的这个元素的样式
+        oLis.item(n).className = "option selectLi";
+        oDivs.item(n).className = "content selectDiv";
+    }
+    oLis.item(0).onclick = function(){
+        changeTab(0)
+    }
+    oLis.item(1).onclick = function(){
+        changeTab(1)
+    }
+    oLis.item(2).onclick = function(){
+        changeTab(2)
+    }
+    oLis.item(3).onclick = function(){
+        changeTab(3)
+    }
+
+</script>

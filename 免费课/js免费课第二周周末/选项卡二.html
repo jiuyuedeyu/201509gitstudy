@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        #tab{
+            width: 500px;
+            margin:50px auto;
+        }
+        #tab ul{
+            text-align: center;
+        }
+        #tab ul li.option{
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background: papayawhip;
+        }
+        .content {
+            height: 200px;
+            background: palegreen;
+            display: none;/*隐藏*/
+        }
+        #tab ul li.selectLi{
+            background: palegreen;
+        }
+        .selectDiv{
+            display: block;/*显示*/
+        }
+    </style>
+</head>
+<body>
+<div id="tab">
+    <ul>
+        <li class="option" index ="0">选项卡一</li>
+        <li class="option" index ="1">选项卡二</li>
+        <li class="option" >选项卡三</li>
+        <li class="option" >选项卡四</li>
+    </ul>
+    <div class="content ">内容一</div>
+    <div class="content ">内容二</div>
+    <div class="content ">内容三</div>
+    <div class="content">内容四</div>
+</div>
+</body>
+</html>
+<script>
+    var tab = document.getElementById("tab");
+    var oLis = tab.getElementsByTagName("li");//一组li标签
+    var oDivs = tab.getElementsByTagName("div");//一组div标签
+
+   /* oLis.item(0).onclick = function(){
+        changeTab(0)
+    }
+    oLis.item(1).onclick = function(){
+        changeTab(1)
+    }
+    oLis.item(2).onclick = function(){
+        changeTab(2)
+    }
+    oLis.item(3).onclick = function(){
+        changeTab(3)
+    }*/
+//    var obj = {};
+//    obj.index = "aa";
+   // console.log(obj);
+    for(var i=0;i<oLis.length;i++){
+        //i 从0-3
+        oLis.item(i).index= i; //通过对象自定义属性的方式把i的值保存下来
+        oLis.item(i).onclick = function(){
+            //为啥这边i的值是4
+            //changeTab(oLis.item(i).index );//这样写是错误的,因为i这时已经变成了4
+            console.log(this.index);//获得当前元素的这个自定义属性值
+            changeTab(this.index);//this表示你当前点击的那个元素
+        }
+    }
+
+    function changeTab(n){
+        //for循环是为了把li和div都设成默认的状态
+        for(var i = 0;i<oLis.length;i++){
+            oLis.item(i).className = "option";
+            oDivs.item(i).className = "content";
+        }
+        //为了设置当前点击的这个元素的样式
+        //oLis.item(4) --null
+        oLis.item(n).className = "option selectLi";
+        oDivs.item(n).className = "content selectDiv";
+    }
+    //for循环语句执行的非常快,有可能几毫秒就执行完了,点击时for循环就已经执行完了,i的值变成了4,因此点击的时候才会报错
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="div1">hello world!</div>
+<script>
+    /*
+    * 匿名方法
+    * 匿名方法的运行
+    * 函数表达式
+    * */
+//    function sum(){
+//        alert("hello world");
+//    }
+
+//    var sum  = function (){
+//        alert("hello world");
+//    }
+//    sum();
+
+    function fn(){
+        alert("我在这")
+    }
+    var oDiv = document.getElementById("div1");
+//    oDiv.onclick = function(){ //当点击div元素的时候运行这个匿名方法
+//        alert("我在这儿")
+//    }
+    //oDiv.onclick = function fn(){alert("我在这")};
+    oDiv.onclick = fn; //表示把这个fn方法执行完的返回值给了onclick事件
+    //onclick要的方法的定义,并不是方法的执行.具体这个方法什么时候执行,由我点击的时候来定
+</script>
+</body>
+</html>

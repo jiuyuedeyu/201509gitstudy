@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //可以实现具体传什么值得出什么结果
+    function sum(n1,n2){//形参
+        //console.log(n2);
+        var total = null;//标识的作用,表示我暂时没有值,我以后会有值的
+        total = n1+n2;
+        return total;
+    }
+    var total = sum(5,10);//实参
+    var  a2 = sum(15,30);
+    var  a3  = sum(10);
+    //console.log(total);
+    //console.log(a2);
+    console.log(a3);
+    /*
+    * 如果形参没有赋值,它的值就是undefined;
+    * */
+    //下一步解决:如果判断实参的个数-----arguments(内置对象--天生就有的,可以直接拿过来用的)
+
+
+</script>
+</body>
+</html>

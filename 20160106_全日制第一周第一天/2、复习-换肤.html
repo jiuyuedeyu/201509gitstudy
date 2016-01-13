@@ -36,20 +36,35 @@
 <input type="button" value="紫"/>
 
 <script type="text/javascript">
-    var ary = ["red", "orange", "yellow", "green", "lightblue", "blue", "purple"];
-    function bindEvent() {
-        var btnList = document.getElementsByTagName("input");
-        for (var i = 0; i < btnList.length; i++) {
-            btnList[i].zhuFeng = i;
-            btnList[i].onclick = function () {
-                //第一个按钮 索引是0  ->ary[0]
-                //第二个按钮 索引是1  ->ary[1]
-                //...
-                document.body.style.backgroundColor = ary[this.zhuFeng];
-            }
-        }
+//    var ary = ["red", "orange", "yellow", "green", "lightblue", "blue", "purple"];
+//    function bindEvent() {
+//        var btnList = document.getElementsByTagName("input");
+//        for (var i = 0; i < btnList.length; i++) {
+//            btnList[i].zhuFeng = i;
+//            btnList[i].onclick = function () {
+//                //第一个按钮 索引是0  ->ary[0]
+//                //第二个按钮 索引是1  ->ary[1]
+//                //...
+//                document.body.style.backgroundColor = ary[this.zhuFeng];
+//            }
+//        }
+//    }
+//    bindEvent();
+var num = 10;
+var obj = {num: 20};
+obj.fn = (function (num) {
+    this.num = num * 3;
+    num++;
+    return function (n) {
+        this.num += n;
+        num++;
+        console.log(num);
     }
-    bindEvent();
+})(obj.num);
+var fn = obj.fn;
+fn(5);
+obj.fn(10);
+console.log(num, obj.num);
 </script>
 </body>
 </html>

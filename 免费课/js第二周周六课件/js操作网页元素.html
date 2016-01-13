@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #div1{
+            color: black;
+        }
+        #div1 a{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="div1" style="color: #fff;background-color: red;font-size: 14px;height: 100px;width: 100px">hello world!</div>-->
+    <div id="div1">hello world!</div>
+</body>
+</html>
+<script>
+    document.getElementById("div1"); //通过id名获得这个元素只能在document找
+    //window表示浏览器
+    //document表示文档(浏览器打开的那一个网页)
+    /*
+    * get
+    * Element
+    * By
+    * Id
+    * */
+    //.表示从属的意思,在script下写的js代码就是window下的,因此这个window.可以省略
+    document.getElementById("div1").style.color ="pink";
+    document.getElementById("div1").style.backgroundColor="green";
+    document.getElementById("div1").style.fontSize = "30px";
+    //document.getElementById("div1").innerHTML = "欢迎大家来到珠峰培训!";
+    document.getElementById("div1").innerHTML = "<a href='http://www.baidu.com'>我是被改变了的内容</a>";
+    //上述js控制元素样式的方式相当于css里通过行内式的方式去改变样式,样式内的样式优先级是最高的
+    //innerText和innerHTML都可以改变元素的内容
+    //区别:
+    //innerText不能识别标签
+    //innerHTML可以识别标签
+
+
+</script>

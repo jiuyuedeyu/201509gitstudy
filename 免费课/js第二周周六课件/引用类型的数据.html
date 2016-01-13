@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*
+    * 基本数据类型只能存储一个值
+    * 引用类型的数据可以存储多种类型的值,是多种数据的载体(复合体)
+    * 1.引用数据类型的定义
+    * 2.引用数据类型的操作:增,删,改,查
+    * 3.严格的对象:json
+    * */
+
+    var  obj = {name:"lily",age:18,'width':"100px","height":"200px",fn:function(){},a:[1,2,3],0:"a1",1:"b1"}
+    //一个对象有多个属性和属性值组成,每对属性名和属性值之间拿逗号隔开 :相当于赋值的意思
+     /*增加一个属性名和属性值*/
+    obj.gender ="female";
+    obj["gender"] = "female";
+
+    //修改
+    obj.age =38;
+    obj['age'] = 38;
+
+
+    //查(读取)
+   // console.log(obj.width)
+    console.log(obj["abc"])//undefined
+
+    //删除
+    //delete obj["age"];
+    delete  obj.age;
+
+
+    //in运算符 可以通过in运算符判断下这个属性是否在这个对象里面
+    console.log('age' in obj);
+    console.log(obj[1]);
+    //几个特殊点:
+    /*
+    * 1.在js中,不能以数字作为变量名,但是可以将数字作为属性名
+    * 2.在对象中,获取数字作为属性名-->获取值的时候 ,不能以打点的方式去获取,只能obj[0]这样的方式去获取
+    * 3.属性名不是数字的时候,以数组表示法去操作时,双引号或单引号必须写如obj["name"],obj['name']  (obj[name]这种写法是错的,这里面的name就表示一个变量)
+    * */
+
+    /*json --严格的对象类型,属性名必须拿双号引起来,单引号也不行,如果属性值是字符串也必须拿双引号引起来*/
+    //json就是一种约定,为了数据交互,能在不同平台,不同语言之间进行数据传递
+    var  obj = {"name":"lily","age":18,"width":"100px","height":"200px",fn:function(){},a:[1,2,3],0:"a1",1:"b1"}
+
+
+ </script>
+</body>
+</html>

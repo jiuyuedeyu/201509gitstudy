@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function sum(){
+        var total = null;
+        var n1 = 10;
+        var n2 = 20;
+        total = n1+n2;
+    //  console.log(total);
+        return total;//这边不是把total这个变量给返回,而是把这个变量的值给返回
+       // total +=10;//total = total+10
+    }
+    var a = sum();
+    var b = sum();
+    var c = sum();
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    /*
+    * return注意点
+    * 1.return只能写在function里面
+    * 2.遇到return这个关键词,方法无条件终止,后面的代码都将不再执行
+    * 3.return后面可以跟一个数据,表示把这个数据返回
+    * 4.如果没写return或者return后面没有跟一个数据,则返回值是undefined
+    * */
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*
+    * 1.哪些数是number类型的?
+    *   整数,小数,NaN (not a number)不是一个有效数字,但是确实是number类型的数据
+    * 什么情况会是NaN?
+    * 1.做数学运算失败的时候
+    * 2.强制把其他数据类型转换成number类型失败的时候,也是NaN
+    * Number() //把任意的其他的数据类型转换成number类型
+    * Boolean true ->1 false->0
+    * undefined ->NaN
+    * null ->0
+    * "" ->0
+    * 非空字符串,通过Number()转换的时候,全部是整数或者小数才能转换成功)否则就是NaN
+    * 只要有一个不是数字(除.以外),结果就是NaN
+    * 数类型的只是简单的传入和传出
+    * //主要把字符串转换number类型的
+    * parseInt()//提取出整数部分,提取失败就是NaN
+    * parseFloat() //不仅能提取出整数部分,还是提取出小数部分,提取失败就是NaN
+    * */
+    /*
+    * parseFloat("11.555px")
+     11.555
+     parseFloat("11px")
+     11
+     parseFloat("a11.11px")
+     NaN
+     parseFloat(".11px")
+     0.11
+     parseFloat("a.11px")
+     NaN
+    * */
+    //=赋值 ==作比较
+    //是否能让一个数跟NaN作比较,看这个数是否是有效数字呢? 否
+    //NaN==NaN  //false  因为NaN是一个非常广泛的一个概念,并不是表示具体一个值
+    //isNaN用来检测一个数是否是有效数字,如果是有效数字->false,不是有效数字->true
+    //isNaN在检测前先通过Number()这个方法强制类型转换下,然后再去检测
+   /* isNaN("aaaa")按以下两步操作
+    Number("aaaa")-->NaN
+    isNaN(NaN) ->true;*/
+    isNaN("11.66px");
+    Number("11.66px");
+
+
+
+</script>
+
+</body>
+</html>
