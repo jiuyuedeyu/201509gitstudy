@@ -34,7 +34,8 @@
     //    });
 
     //姓名 ->"何殿杰".localeCompare("王彦珍")
-    //localeCompare:按照字母在26个字母表中的顺序进行比较,"a".localeCompare("b") ->-1  "b".localeCompare("a") ->1  "a".localeCompare("a") ->0 如果第一个字母相等则继续比较第二个字母...
+    //localeCompare:按照字母在26个字母表中的顺序进行比较,"a".localeCompare("b") ->-1  "b".localeCompare("a") ->1
+    // "a".localeCompare("a") ->0 如果第一个字母相等则继续比较第二个字母...
     ary.sort(function (a, b) {
         return a.name.localeCompare(b.name);
     });

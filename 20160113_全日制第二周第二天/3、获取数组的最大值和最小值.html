@@ -27,12 +27,12 @@
 
 
     //1、先排序,然后掐头去尾
-    //    ary.sort(function (a, b) {
-    //        return a - b;
-    //    });
-    //    var max = ary[ary.length - 1];
-    //    var min = ary[0];
-    //    console.log(max, min);
+        ary.sort(function (a, b) {
+            return a - b;
+        });
+        var max = ary[ary.length - 1];
+        var min = ary[0];
+        console.log(max, min);
 
     //3、假设法
     //我们假设数组中的第一个值是最大的,然后和剩下的项进行依次的比较,如果比我们假设的值还要大,说明假设的值是错误的,把当前的项的值从新设置为当前假设的最大值
@@ -49,9 +49,9 @@
     //Math.max(12,23,34,14,35,16) ->35
 
     //原理:apply在操作的时候,虽然传递进来的是一个数组,但是和call一样相当于一个个的给max方法传递的参数值
-    var max = Math.max.apply(null, ary);
-    var min = Math.min.apply(null, ary);
-    console.log(max, min);
+//    var max = Math.max.apply(null, ary);
+//    var min = Math.min.apply(null, ary);
+//    console.log(max, min);
 
     //不行的
     //    var str = ary.toString();//->"12,23,34,14,35,16"
