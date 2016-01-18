@@ -36,7 +36,8 @@
     //1、获取需要排序的列表(元素集合)
     var oUl = document.getElementById("ul1"), oLis = oUl.getElementsByTagName("li");
 
-    //2、把元素集合类数组转换为数组->之前的oLis对应的堆内存和我们ary对应的堆内存,虽然里面存储的是相同的li,但是不是同一个堆内存,ary的堆内存发生改变对oLis不会产生任何的影响
+    //2、把元素集合类数组转换为数组->之前的oLis对应的堆内存和我们ary对应的堆内存,虽然里面存储的是相同的li,但是不是同一个堆内存,
+    // ary的堆内存发生改变对oLis不会产生任何的影响
     var ary = utils.listToArray(oLis);
 
     //3、给存储每一个li的ary这个集合进行排序->按照每一个li中的内容从小到大进行排序

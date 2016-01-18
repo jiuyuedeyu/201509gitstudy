@@ -24,7 +24,8 @@
     //a->当前项
     //b->当前项的后一项
 
-    //在匿名函数中写的return a-b; 让当前项的值-后一项的值,得到一个>0或者<=0的数字,如果>0让当前项后一项交换位置,<=0位置保持不变 ->每一次我不一定非要写return a-b;我们的最终目的是返回一个>0还是<=0的数,来确定当前项和后一项是否交换位置
+    //在匿名函数中写的return a-b; 让当前项的值-后一项的值,得到一个>0或者<=0的数字,如果>0让当前项后一项交换位置,<=0位置保持不变 ->每一
+    // 次我不一定非要写return a-b;我们的最终目的是返回一个>0还是<=0的数,来确定当前项和后一项是否交换位置
     //    ary.sort(function (a, b) {
     //        return 1;//->返回的是一个恒>0的数字,不管a和b谁大,都交换位置
     //    });
@@ -46,7 +47,8 @@
     ary.sort(function (a, b) {
         return a.name.localeCompare(b.name);
     });
-    //对于非数字之间的比较我们使用字符串方法localeCompare进行比较:把需要比较的转换为字母,然后按照字母在26个字母表中的先后顺序进行比较,例如:"z".localeCompare("a") ->1  "l".localeCompare("y") ->-1  "a".localeCompare("a") ->0
+    //对于非数字之间的比较我们使用字符串方法localeCompare进行比较:把需要比较的转换为字母,然后按照字母在26个字母表中的先后顺序进行比较,例如:"z".
+    // localeCompare("a") ->1  "l".localeCompare("y") ->-1  "a".localeCompare("a") ->0
     //"张三".localeCompare("张五") ->'zhangsan'.localeCompare('zhangwu') 对于第一个一样的,我们继续比较后面的字母... ->-1
     console.log(ary);
 
