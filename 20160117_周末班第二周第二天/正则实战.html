@@ -6,7 +6,8 @@
 </head>
 <body>
 <script type="text/javascript">
-    //1、获取一个字符串中出现次数最多的字符和对应的次数,例如:var str = "zhufengpeixun2015yangfanqihang";问哪几个字符出现的次数最多,一共有多少次?
+    //1、获取一个字符串中出现次数最多的字符和对应的次数,例如:var str = "zhufengpeixun2015yangfanqihang";
+    // 问哪几个字符出现的次数最多,一共有多少次?
     var str = "zhufengpeixun2015yangfanqihang", obj = {};
     //首先统计每一个字符出现的次数
     str.replace(/\w/g, function () {
@@ -14,7 +15,7 @@
         if (obj[key] >= 1) {
             obj[key]++;
             return;
-        }
+       }
         obj[key] = 1;
     });
     //用假设法获取出现的最多次数
@@ -48,6 +49,7 @@
     //3、单词首字母大写
     str = "my name is zhou xiao tian,my age is twenty five years old~~";
     str = str.replace(/\w+/g, function () {
+        //console.dir(arguments);
         var res = arguments[0];
         return res.substr(0, 1).toUpperCase() + res.substr(1);
     });
