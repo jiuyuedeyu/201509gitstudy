@@ -72,7 +72,7 @@
     //    for (var i = 1; i <= 100; i++) {
     //        total += (i % 3 === 0 ? 0 : i);
     //    }
-    //    console.log(total);//->3367
+    //    console.log(total);//->3367   5000-6000
 
     //    function sum(n) {
     //        if (n === 1) {
@@ -88,12 +88,12 @@
     //第四次sum(2)  5+4+3+2+sum(1)
     //第五次sum(1)  5+4+3+2+1
 
-    function sum(n) {
-        if (n === 1) return 1;
-        return n % 3 === 0 ? sum(n - 1) : n + sum(n - 1);
-    }
-    var total = sum(100);
-    console.log(total);//->3367
+//    function sum(n) {
+//        if (n === 1) return 1;
+//        return n % 3 === 0 ? sum(n - 1) : n + sum(n - 1);
+//    }
+//    var total = sum(100);
+//    console.log(total);//->3367
 </script>
 </body>
 </html>

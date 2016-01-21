@@ -22,7 +22,11 @@
 </head>
 <body>
 <div id="div1" style="height: 200px;">
-    站在台风口上,猪都能飞起来~~;要得到你必须要付出,要付出你还需要学会坚持,如果你真的觉得很难,那你就放弃,但是一但放弃就不要在抱怨,我觉得人生就是这样,世界真的是平衡的,每个人都是通过自己的努力,去决定自己生活的样子;
+    站在台风口上,猪都能飞起来~~;
+    要得到你必须要付出,要付出你还需要学会坚持,
+    如果你真的觉得很难,那你就放弃,但是一但放弃就不要在抱怨,
+    我觉得人生就是这样,世界真的是平衡的,
+    每个人都是通过自己的努力,去决定自己生活的样子;
 </div>
 <script type="text/javascript">
     var oDiv = document.getElementById("div1");
@@ -33,13 +37,15 @@
     //console.log(oDiv.style.height);//->"200px"
 
     //2、通过JS提供的方法getComputedStyle:获取所有经过浏览器计算的样式
-    //->只要当前的元素在页面中呈现出来了,那么它的所有的样式都是经过浏览器计算的,不管写在行内还是样式表中,也不管你写没写,都可以获取到
+    //->只要当前的元素在页面中呈现出来了,那么它的所有的样式都是经过浏览器计算的,
+    // 不管写在行内还是样式表中,也不管你写没写,都可以获取到
     //->window.getComputedStyle(当前要操作的元素, 要操作元素的伪类(我们一般都不用,第二个参数写null即可))
     //->通过其获取的是一个样式对象集合(它是CSSStyleDeclaration这个类的一个实例),里面存储了我们当前元素的所有样式信息
     //console.log(window.getComputedStyle(oDiv, null)["width"]);
 
     //3、但是在IE6~8下不兼容
-    //->报错:对象不支持“getComputedStyle”属性或方法 ->说明window这个浏览器对象中是不存在getComputedStyle这个属性的
+    //->报错:对象不支持“getComputedStyle”属性或方法
+    // ->说明window这个浏览器对象中是不存在getComputedStyle这个属性的
     //->console.log(window.getComputedStyle);//->undefined
     //虽然不支持getComputedStyle,但是IE提供了另外一个方法来代替它:currentStyle
     //->curEle.currentStyle
